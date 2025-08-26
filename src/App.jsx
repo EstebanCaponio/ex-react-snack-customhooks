@@ -1,3 +1,4 @@
+import useCustomPointer from "./useCustomPointer";
 import useDate from "./useDate";
 import useSwitch from "./useSwitch"
 
@@ -6,6 +7,7 @@ function App() {
 
   const [value, toggle] = useSwitch(false)
   const currentDate = useDate();
+  const customPointer = useCustomPointer();
 
   return (
     <>
@@ -18,6 +20,8 @@ function App() {
         <h1>Data e ora attuali:</h1>
         <p>{currentDate.toLocaleString()}</p>
       </div>
+
+      {customPointer}
     </>
   )
 }
